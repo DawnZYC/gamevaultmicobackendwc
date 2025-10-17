@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.dto.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.dto.shopping;
 
 import lombok.Data;
 

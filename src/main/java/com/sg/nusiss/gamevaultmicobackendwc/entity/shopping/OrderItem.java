@@ -1,8 +1,9 @@
-package com.sg.nusiss.gamevaultbackend.entity.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.ENUM.OrderStatus;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM.OrderStatus;
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

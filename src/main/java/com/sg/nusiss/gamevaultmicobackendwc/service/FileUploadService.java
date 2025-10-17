@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.service;
+package com.sg.nusiss.gamevaultmicobackendwc.service;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Value;

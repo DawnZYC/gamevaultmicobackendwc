@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.config.auth;
+package com.sg.nusiss.gamevaultmicobackendwc.config.auth;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.io.Resource;

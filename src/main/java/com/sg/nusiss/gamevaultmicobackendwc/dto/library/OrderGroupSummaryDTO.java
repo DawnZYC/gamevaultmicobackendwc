@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.dto.library;
+package com.sg.nusiss.gamevaultmicobackendwc.dto.library;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -9,7 +9,3 @@ public class OrderGroupSummaryDTO {
     public String status;
     public BigDecimal total;
 }
-
-
-
-

@@ -1,11 +1,11 @@
-package com.sg.nusiss.gamevaultbackend.controller.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.controller.shopping;
 
-import com.sg.nusiss.gamevaultbackend.dto.shopping.CartDTO;
-import com.sg.nusiss.gamevaultbackend.dto.library.OrderDTO;
-import com.sg.nusiss.gamevaultbackend.entity.ENUM.PaymentMethod;
-import com.sg.nusiss.gamevaultbackend.service.shopping.CartService;
-import com.sg.nusiss.gamevaultbackend.service.discount.DiscountFactory;
-import com.sg.nusiss.gamevaultbackend.service.discount.IDiscountStrategy;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.library.OrderDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.shopping.CartDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM.PaymentMethod;
+import com.sg.nusiss.gamevaultmicobackendwc.service.discount.DiscountFactory;
+import com.sg.nusiss.gamevaultmicobackendwc.service.discount.IDiscountStrategy;
+import com.sg.nusiss.gamevaultmicobackendwc.service.shopping.CartService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

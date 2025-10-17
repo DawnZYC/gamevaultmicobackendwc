@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.entity.library;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.library;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(
-        name = "purchased_game_activation_code", // 统一命名为复数形态
+        name = "purchased_game_activation_code",
         indexes = {
                 @Index(name = "idx_user_id", columnList = "user_id"),
                 @Index(name = "idx_order_item_id", columnList = "order_item_id", unique = true)
@@ -44,3 +44,4 @@ public class PurchasedGameActivationCode {
                 .build();
     }
 }
+

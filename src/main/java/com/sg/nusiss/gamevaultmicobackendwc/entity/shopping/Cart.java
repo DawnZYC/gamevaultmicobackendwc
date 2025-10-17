@@ -1,7 +1,7 @@
-package com.sg.nusiss.gamevaultbackend.entity.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.ENUM.CartStatus;
-import com.sg.nusiss.gamevaultbackend.entity.ENUM.PaymentMethod;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM.CartStatus;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.Data;
 

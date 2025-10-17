@@ -1,8 +1,9 @@
 // src/main/java/com/gamevault/storeservice/repository/CartRepository.java
-package com.sg.nusiss.gamevaultbackend.repository.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.repository.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.shopping.Cart;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;

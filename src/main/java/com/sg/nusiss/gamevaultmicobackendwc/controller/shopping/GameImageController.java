@@ -1,8 +1,8 @@
-package com.sg.nusiss.gamevaultbackend.controller.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.controller.shopping;
 
-import com.sg.nusiss.gamevaultbackend.service.FileUploadService;
-import com.sg.nusiss.gamevaultbackend.service.shopping.GameService;
-import com.sg.nusiss.gamevaultbackend.dto.shopping.GameDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.shopping.GameDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.service.FileUploadService;
+import com.sg.nusiss.gamevaultmicobackendwc.service.shopping.GameService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

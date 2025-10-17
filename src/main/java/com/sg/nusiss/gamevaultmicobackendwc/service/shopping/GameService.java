@@ -1,9 +1,9 @@
-package com.sg.nusiss.gamevaultbackend.service.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.service.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.shopping.Game;
-import com.sg.nusiss.gamevaultbackend.dto.shopping.GameDTO;
-import com.sg.nusiss.gamevaultbackend.repository.shopping.GameRepository;
-import com.sg.nusiss.gamevaultbackend.repository.library.UnusedGameActivationCodeRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.shopping.GameDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.Game;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.library.UnusedGameActivationCodeRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.shopping.GameRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

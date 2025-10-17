@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.dto.library;
+package com.sg.nusiss.gamevaultmicobackendwc.dto.library;
 
 import lombok.Data;
 
@@ -20,7 +20,4 @@ public class OrderItemDTO {
     public String gameTitle;
     public String imageUrl;
 }
-
-
-
 

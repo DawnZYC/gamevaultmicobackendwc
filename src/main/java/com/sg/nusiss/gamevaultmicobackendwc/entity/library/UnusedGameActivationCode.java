@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.entity.library;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.library;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -16,5 +16,5 @@ public class UnusedGameActivationCode {
 
     @Column(nullable = false, unique = true)
     private String activationCode;
-
 }
+

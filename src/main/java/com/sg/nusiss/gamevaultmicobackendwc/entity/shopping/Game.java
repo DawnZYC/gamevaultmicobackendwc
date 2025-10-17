@@ -1,7 +1,8 @@
-package com.sg.nusiss.gamevaultbackend.entity.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.shopping;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 

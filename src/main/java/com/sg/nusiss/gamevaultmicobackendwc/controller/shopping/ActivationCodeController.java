@@ -1,8 +1,8 @@
-package com.sg.nusiss.gamevaultbackend.controller.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.controller.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.library.PurchasedGameActivationCode;
-import com.sg.nusiss.gamevaultbackend.repository.library.PurchasedGameActivationCodeRepository;
-import com.sg.nusiss.gamevaultbackend.service.shopping.GameActivationCodeService;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.library.PurchasedGameActivationCode;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.library.PurchasedGameActivationCodeRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.service.shopping.GameActivationCodeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

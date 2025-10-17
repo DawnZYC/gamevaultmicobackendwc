@@ -1,14 +1,14 @@
-package com.sg.nusiss.gamevaultbackend.controller.library;
+package com.sg.nusiss.gamevaultmicobackendwc.controller.library;
 
-import com.sg.nusiss.gamevaultbackend.dto.library.OrderDTO;
-import com.sg.nusiss.gamevaultbackend.dto.library.OrderDetailDTO;
-import com.sg.nusiss.gamevaultbackend.dto.library.OrderGroupSummaryDTO;
-import com.sg.nusiss.gamevaultbackend.entity.ENUM.PaymentMethod;
-import com.sg.nusiss.gamevaultbackend.entity.shopping.OrderItem;
-import com.sg.nusiss.gamevaultbackend.repository.library.OrderItemRepository;
-import com.sg.nusiss.gamevaultbackend.repository.library.PurchasedGameActivationCodeRepository;
-import com.sg.nusiss.gamevaultbackend.service.shopping.CartService;
-import com.sg.nusiss.gamevaultbackend.service.shopping.OrderService;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.library.OrderDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.library.OrderDetailDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.dto.library.OrderGroupSummaryDTO;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM.PaymentMethod;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.OrderItem;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.library.OrderItemRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.library.PurchasedGameActivationCodeRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.service.shopping.CartService;
+import com.sg.nusiss.gamevaultmicobackendwc.service.shopping.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -130,6 +130,15 @@ public class OrderController {
     @PostMapping("/{orderId}/fail")
     public ResponseEntity<Void> fail(@PathVariable Long orderId,
                                      @AuthenticationPrincipal Jwt jwt) {
+        Long userId = ((Number) jwt.getClaims().get("uid")).longValue();
+        orderService.markFailed(orderId, userId);
+        return ResponseEntity.ok().build();
+    }
+
+    /** ❌ 7) 取消订单 */
+    @PostMapping("/{orderId}/cancel")
+    public ResponseEntity<Void> cancel(@PathVariable Long orderId,
+                                       @AuthenticationPrincipal Jwt jwt) {
         Long userId = ((Number) jwt.getClaims().get("uid")).longValue();
         orderService.markFailed(orderId, userId);
         return ResponseEntity.ok().build();

@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.common;
+package com.sg.nusiss.gamevaultmicobackendwc.common;
 
 /**
  * @ClassName ResultUtils 返回工具类

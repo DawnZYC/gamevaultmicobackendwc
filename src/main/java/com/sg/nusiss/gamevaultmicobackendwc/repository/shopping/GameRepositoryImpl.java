@@ -1,6 +1,6 @@
-package com.sg.nusiss.gamevaultbackend.repository.shopping;
+package com.sg.nusiss.gamevaultmicobackendwc.repository.shopping;
 
-import com.sg.nusiss.gamevaultbackend.entity.shopping.Game;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.Game;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;

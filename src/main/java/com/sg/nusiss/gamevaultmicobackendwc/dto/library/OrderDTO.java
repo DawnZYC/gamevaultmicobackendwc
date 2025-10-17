@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.dto.library;
+package com.sg.nusiss.gamevaultmicobackendwc.dto.library;
 
 import lombok.Data;
 
@@ -16,3 +16,4 @@ public class OrderDTO {
     private BigDecimal finalAmount;
     private List<OrderItemDTO> orderItems;
 }
+

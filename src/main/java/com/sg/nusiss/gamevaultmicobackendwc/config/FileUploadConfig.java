@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.config;
+package com.sg.nusiss.gamevaultmicobackendwc.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

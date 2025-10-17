@@ -1,6 +1,7 @@
-package com.sg.nusiss.gamevaultbackend.service.discount;
+package com.sg.nusiss.gamevaultmicobackendwc.service.discount;
 
-import com.sg.nusiss.gamevaultbackend.entity.shopping.Game;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.Game;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 

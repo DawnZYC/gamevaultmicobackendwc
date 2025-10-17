@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.common;
+package com.sg.nusiss.gamevaultmicobackendwc.common;
 
 /**
  * @ClassName ErrorCode 全局错误码

@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.config.auth;
+package com.sg.nusiss.gamevaultmicobackendwc.config.auth;
 
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.jwk.JWKSet;

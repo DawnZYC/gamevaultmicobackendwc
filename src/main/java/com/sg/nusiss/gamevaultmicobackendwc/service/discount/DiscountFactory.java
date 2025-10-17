@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.service.discount;
+package com.sg.nusiss.gamevaultmicobackendwc.service.discount;
 
 public class DiscountFactory {
 

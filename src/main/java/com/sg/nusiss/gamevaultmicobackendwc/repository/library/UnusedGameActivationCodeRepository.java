@@ -1,6 +1,6 @@
-package com.sg.nusiss.gamevaultbackend.repository.library;
+package com.sg.nusiss.gamevaultmicobackendwc.repository.library;
 
-import com.sg.nusiss.gamevaultbackend.entity.library.UnusedGameActivationCode;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.library.UnusedGameActivationCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
@@ -10,3 +10,4 @@ public interface UnusedGameActivationCodeRepository extends JpaRepository<Unused
     Optional<UnusedGameActivationCode> findFirstByGameId(Long gameId);
     long countByGameId(Long gameId);
 }
+

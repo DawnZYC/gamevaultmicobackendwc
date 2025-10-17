@@ -1,4 +1,4 @@
-package com.sg.nusiss.gamevaultbackend.entity.ENUM;
+package com.sg.nusiss.gamevaultmicobackendwc.entity.ENUM;
 
 /**
  * 支付方式枚举
