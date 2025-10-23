@@ -2,8 +2,10 @@ package com.sg.nusiss.gamevaultmicobackendwc.service.shopping;
 
 import com.sg.nusiss.gamevaultmicobackendwc.entity.library.PurchasedGameActivationCode;
 import com.sg.nusiss.gamevaultmicobackendwc.entity.library.UnusedGameActivationCode;
+import com.sg.nusiss.gamevaultmicobackendwc.entity.shopping.Game;
 import com.sg.nusiss.gamevaultmicobackendwc.repository.library.PurchasedGameActivationCodeRepository;
 import com.sg.nusiss.gamevaultmicobackendwc.repository.library.UnusedGameActivationCodeRepository;
+import com.sg.nusiss.gamevaultmicobackendwc.repository.shopping.GameRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,15 +20,18 @@ public class GameActivationCodeService {
 
     private final UnusedGameActivationCodeRepository unusedRepo;
     private final PurchasedGameActivationCodeRepository purchasedRepo;
+    private final GameRepository gameRepo;
 
     /** 默认目标库存量，可在 application.yml 中修改 */
     @Value("${activation.stock.target:30}")
     private int TARGET_STOCK;
 
     public GameActivationCodeService(UnusedGameActivationCodeRepository unusedRepo,
-                                     PurchasedGameActivationCodeRepository purchasedRepo) {
+                                     PurchasedGameActivationCodeRepository purchasedRepo,
+                                     GameRepository gameRepo) {
         this.unusedRepo = unusedRepo;
         this.purchasedRepo = purchasedRepo;
+        this.gameRepo = gameRepo;
     }
 
     /** 游戏上架时生成初始激活码（保证库存为目标值） */
@@ -87,5 +92,24 @@ public class GameActivationCodeService {
         long unused = unusedRepo.countByGameId(gameId);
         long purchased = purchasedRepo.findByUserId(gameId).size();
         return Map.of("unused", unused, "purchased", purchased);
+    }
+
+    /** 批量初始化所有游戏的激活码（用于SQL数据初始化后） */
+    @Transactional
+    public int initializeAllGamesCodes() {
+        List<Game> allGames = gameRepo.findAll();
+        int processedCount = 0;
+        
+        for (Game game : allGames) {
+            long existingCodes = unusedRepo.countByGameId(game.getGameId());
+            if (existingCodes < TARGET_STOCK) {
+                generateInitialCodes(game.getGameId());
+                processedCount++;
+                System.out.printf("为游戏 %d (%s) 初始化激活码库存%n", 
+                    game.getGameId(), game.getTitle());
+            }
+        }
+        
+        return processedCount;
     }
 }

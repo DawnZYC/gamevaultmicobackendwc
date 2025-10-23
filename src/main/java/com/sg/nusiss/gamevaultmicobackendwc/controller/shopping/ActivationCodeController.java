@@ -42,6 +42,13 @@ public class ActivationCodeController {
         return ResponseEntity.ok("已初始化激活码库存至目标数量");
     }
 
+    /** 批量初始化所有游戏的激活码（用于SQL数据初始化后） */
+    @PostMapping("/admin/games/activation-codes/init-all")
+    public ResponseEntity<String> initAllGamesCodes() {
+        int count = activationService.initializeAllGamesCodes();
+        return ResponseEntity.ok("已为 " + count + " 个游戏初始化激活码库存");
+    }
+
     // ---------------------------- 用户功能 ----------------------------
 
     /** 🧾 查询当前用户所有已购激活码 */
